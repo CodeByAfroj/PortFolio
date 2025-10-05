@@ -12,6 +12,11 @@ import ui from "../assets/ui.png"
 import { FaArrowCircleDown } from 'react-icons/fa';
 import { FaGithub, FaTwitter } from 'react-icons/fa';
 import { AiOutlineArrowDown } from 'react-icons/ai'
+        import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
+
+
+
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -34,6 +39,8 @@ import {
   SiRedux,
   SiTypescript,
 } from "react-icons/si";
+import Contact from './Contact';
+import ProfileCircle from '../components/ProfileCircle';
 
 
 
@@ -129,19 +136,45 @@ const techLogos = [
 
       <div className='h-full px-10 min-md:px-20 '>
         <div className="   flex flex-col mt-5">
-          <div className=' rounded-md'>
-            <div data-aos="zoom-out" className=" flex items-center text-center max-sm:text-4xl text-5xl font-bold max-sm:py-4 py-3 h-30  rounded-xl min-md:ml-12 ">Hi,</div>
-            <div data-aos="zoom-out" className=" flex items-center text-center max-sm:text-4xl text-5xl font-bold max-sm:py-4 py-3 h-30  rounded-xl -mt-12 min-md:ml-14 ">I'm <span className=' px-2 py-1 text-purple-400'> Afroj</span></div>
-            <div data-aos="fade-right" className='text-white text-xl min-md:ml-12'>I Develop Modern user interfaces and web apps</div>
-          </div>
-          <div data-aos="zoom-in" className='mt-10 h-70 w-full outline-1 outline-blue-400 rounded-xl'>
+        <div className='rounded-md'>
+  <div data-aos="zoom-out" className="flex items-center text-center max-sm:text-4xl text-5xl font-bold max-sm:py-4 py-3 h-30 rounded-xl min-md:ml-12">
+    Hi,
+  </div>
 
+  <div data-aos="zoom-out" className="flex items-center text-center max-sm:text-4xl text-5xl font-bold max-sm:py-4 py-3 h-30 rounded-xl -mt-12 min-md:ml-14">
+    I'm <span className='px-2 py-1 text-purple-400'> Afroj</span>
+  </div>
+
+  <div className="text-white text-xl min-md:ml-12 mt-4 flex flex-wrap items-center gap-2">
+    <span>I Develop Modern</span>
+    <span className="text-purple-400">
+      <Typewriter
+        words={["User Interfaces", "Web Apps", "Full Stack Solutions"]}
+        loop={0}            // 0 = run once, change to Infinity for looping
+        cursor
+        cursorStyle="|"
+        typeSpeed={80}       // typing speed
+        deleteSpeed={40}     // deletion speed
+        delaySpeed={1200}    // delay before typing next word
+      />
+    </span>
+  </div>
+</div>
+   
+      {/* Description with subtle fade */}
+    
+ 
+
+
+          
+          <div data-aos="zoom-in" className='mt-10 h-70 w-full outline-1 outline-blue-400 rounded-xl'>
+             
           </div>
         </div>
         <div className=' w-full flex h-10 mt-10 flex-row gap-4 justify-center rounded-4xl' >
-          <div data-aos="zoom-in" className='p-2 font-medium h-10 outline  outline-cyan-400 rounded-full hover:outline-3 hover:cursor-pointer text-amber-50 '  ><a href="/about">About Me</a></div>
-          <div data-aos="zoom-in" className='p-2 font-medium h-10  outline outline-cyan-400  rounded-full hover:outline-3 hover:cursor-pointer text-amber-50 ' ><a href="/projects">Projects</a></div>
-
+          <div data-aos="fade-right" className='p-2 font-medium h-10 outline  outline-cyan-400 rounded-full hover:outline-3 hover:cursor-pointer text-amber-50 '  ><a href="/about">About Me</a></div>
+          <div data-aos="fade-left" className='p-2 font-medium h-10  outline outline-cyan-400  rounded-full hover:outline-3 hover:cursor-pointer text-amber-50 ' ><a href="/projects">Projects</a></div>
+    
         </div>
 
 
@@ -191,7 +224,7 @@ const techLogos = [
                     <div data-aos="fade-up" className='h-10 w-10 rounded-full outline-4 outline-gray-300 -ml-5'></div>
                     <div data-aos="fade-up" className='h-60 w-0 outline-4 outline-gray-300 mt-1 '></div>
                   </div>
-                  <div data-aos="fade-left" className='max-md:h-auto  min-md:h-auto w-150  outline-2 outline-gray-300 rounded-md p-3 text-xl leading-relaxed tracking-wide text-gray-300 '>I am a skilled Full Stack Developer with extensive experience in both frontend and backend technologies. I have a strong track record of delivering high-quality applications, from simple to complex, with a focus on user-centric design and scalable architecture.</div>
+                  <div data-aos="fade-left" className='max-md:h-auto h-70  min-md:h-auto w-150  outline-2 outline-gray-300 rounded-md p-3 text-xl leading-relaxed tracking-wide text-gray-300 '>I am a skilled Full Stack Developer with extensive experience in both frontend and backend technologies. I have a strong track record of delivering high-quality applications, from simple to complex, with a focus on user-centric design and scalable architecture.</div>
                 </div>
 
                 <div data-aos="fade-left" className='min-sm:hidden text-lg min-md:p-2  max-sm:text-md  p-4  leading-relaxed tracking-wide text-gray-300 '>I am a skilled Full Stack Developer with extensive experience in both frontend and backend technologies.</div>
@@ -199,7 +232,7 @@ const techLogos = [
             </div>
           </div>
           {/* cards */}
-      <div
+           <div
       data-aos="fade-up"
       className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 p-6 mt-10 place-items-center"
     >
@@ -237,7 +270,8 @@ const techLogos = [
         </div>
       ))}
     </div>
- 
+
+
           <div className='work flex flex-col justify-center items-center '>
             <div className='mt-50 h-full w-full'>
               <div className='flex flex-col justify-center items-center'>
@@ -252,7 +286,7 @@ const techLogos = [
                       <div data-aos="fade-up" className='h-10 w-10 rounded-full outline-4 outline-gray-300  -ml-5'></div>
                       <div data-aos="fade-up" className='h-60 w-0 outline-4 outline-gray-300 mt-1 '></div>
                     </div>
-                    <div data-aos="fade-left" className='max-md:h-auto min-md:h-auto max-md:w-auto w-140  outline-2 outline-gray-300 rounded-md p-4 text-xl leading-relaxed tracking-wide text-gray-300'>I’ve successfully worked on a variety of projects, including a comprehensive recipe book application, demonstrating my ability to bring creative ideas to life while ensuring performance and functionality. Whether developing intuitive UIs or robust backend systems, I thrive in building end-to-end solutions that meet both client needs and business goals.</div>
+                    <div data-aos="fade-left" className='max-md:h-auto h-70  min-md:h-auto w-150 outline-2 outline-gray-300 rounded-md p-4 text-xl leading-relaxed tracking-wide text-gray-300'>I’ve successfully worked on a variety of projects, including a comprehensive recipe book application, demonstrating my ability to bring creative ideas to life while ensuring performance and functionality. Whether developing intuitive UIs or robust backend systems, I thrive in building end-to-end solutions that meet both client needs and business goals.</div>
                   </div>
 
                   <div data-aos="fade-left" className='min-sm:hidden text-lg min-md:p-2  max-sm:text-md  p-2 leading-relaxed tracking-wide text-gray-300'>I’ve successfully worked on a variety of projects, including a comprehensive recipe book application, demonstrating my ability to bring creative ideas to life while ensuring performance and functionality.</div>
@@ -340,7 +374,7 @@ const techLogos = [
                       <div data-aos="fade-up" className='h-10 w-10 rounded-full outline-4 outline-gray-300  -ml-5'></div>
                       <div data-aos="fade-up" className='h-60 w-0 outline-4 outline-gray-300 mt-1 '></div>
                     </div>
-                    <div data-aos="fade-left" className='max-md:h-auto min-md:h-auto max-md:w-auto w-140  outline-2 outline-gray-300 rounded-md p-4 text-xl leading-relaxed tracking-wide text-gray-300'>I’ve collaborated on real-world projects that blend innovation with functionality. From crafting seamless UIs to building efficient backend systems, I deliver full-stack solutions. My work includes dynamic applications like a recipe book platform tailored for user engagement. Each project reflects problem-solving, technical skill, and a passion for user-centered design.</div>
+                    <div data-aos="fade-left" className='max-md:h-auto h-50  min-md:h-auto w-150  outline-2 outline-gray-300 rounded-md p-4 text-xl leading-relaxed tracking-wide text-gray-300'>I’ve collaborated on real-world projects that blend innovation with functionality. From crafting seamless UIs to building efficient backend systems, I deliver full-stack solutions. My work includes dynamic applications like a recipe book platform tailored for user engagement. Each project reflects problem-solving, technical skill, and a passion for user-centered design.</div>
                   </div>
 
                   <div data-aos="fade-left" className='min-sm:hidden text-lg min-md:p-2  max-sm:text-md  p-2 leading-relaxed tracking-wide text-gray-300'>I’ve collaborated on real-world projects that blend innovation with functionality. From crafting seamless UIs to building efficient backend systems, I deliver full-stack solutions.</div>
@@ -395,50 +429,10 @@ const techLogos = [
             
 
           </div>
+           <Contact/>
 
         </div>
-          <div className='w-full mt-10   '>
-                <div className='flex flex-row justify-center min-md:justify-around rounded-xl '>
-                  <div className='outline outline-blue-500 rounded-xl min-md:p-1 max-sm:hidden'>
-                    <EarthScene style={{ width: '100vw', height: '100vh' }}/>
-                  </div>
-                  <div className='h-full form outline outline-blue-500 rounded-xl   min-md:p-11 p-2  '><span className=' text-3xl  '>Contact Me.</span>
-
-                    <form className='  ' onSubmit={submitHandler} method="post">
-                      <div className='mt-2 p-2 flex flex-col  gap-2'>
-                        <label htmlFor="">
-                          Name:
-                        </label>
-                        <input type="text" placeholder='Enter Your Good Name.' value={name} onChange={(e) => setName(e.target.value)} />
-                      </div>
-                      <div className='mt-2 p-2 flex flex-col  gap-2'>
-                        <label htmlFor="">
-                          Email:
-                        </label>
-                        <input type="text" placeholder='What is your web address?' value={email} onChange={(e) => setEmail(e.target.value)} />
-                      </div>
-                      <label className='mt-2 p-2 flex flex-col  gap-2' >
-                        Message:
-                      </label>
-                      <div className='mt-2 p-3'>
-
-                        <textarea placeholder='What You want to say?' name="" id="" rows="2" value={msg} onChange={(e) => setMsg(e.target.value)}></textarea>
-                      </div>
-
-                      <div className='m-2 outline outline-cyan-400 rounded-xl text-center'>
-                        <button className=' ' type="submit" >Submit</button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-
-
-
-
-
-
-
+        
       </div>
 
     </>
