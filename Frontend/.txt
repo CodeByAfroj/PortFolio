@@ -1,0 +1,70 @@
+
+   
+    // <div className='h-screen flex mb-10 px-10 '>
+    //      <div className=' outline-2 outline-red-400  mt-10  w-screen h-100 rounded-xl flex flex-row justify-around'>
+    //          <div className='outline-2 outline-purple-500 h-40 w-60 rounded-xl '>Name:</div>
+    //          <div className='outline-2 outline-purple-500 h-40 w-50 rounded-xl '>Image</div>
+         
+    //     </div>
+    // </div>
+<>
+{/* FOR SMALLER DEVICES */}
+{/* 
+<div className='h-screen px-10'>
+  
+ <div className="grid  grid-cols-2 gap-5  min-md:gap-4 mt-10">
+    <div className=" text-center text-2xl font-bold max-sm:py-4 py-3 h-30 outline outline-blue-400 rounded-xl ">Hi! I Am Afroj.</div>
+   <div className=" max-sm:w-30 max-sm:h-30 min-md:w-60 min-md:h-60 bg-purple-600 hover:outline-2 transition duration-3000 rounded-full flex items-center justify-center text-white font-bold  ">
+   A  
+  </div>
+</div>
+   <div className="grid  grid-row-2 gap-4 mt-5">
+     <div className='min-md:h-15 outline-1 outline-blue-400 rounded-xl text-center py-3 font-semibold'>I'm a MERN Stack Developer & Web Enthusiast</div>
+     <div className='min-md:15 outline-1 outline-blue-400 rounded-xl text-center py-3'> Passionate about building modern, responsive, and interactive web applications using the MERN stack. I love turning ideas into beautiful, scalable digital experiences.</div>
+</div>
+
+<div className=' w-full flex h-10 mt-10 flex-row gap-4 justify-center rounded-4xl' >
+  <div className='p-2 font-medium h-10 outline  outline-purple-400 rounded-full hover:outline-2 ' ><a href="/about">About Me</a></div>
+  <div className='p-2 font-medium h-10 outline  bg-purple-800 rounded-full hover:cursor-pointer hover:bg-purple-700' ><a href="/projects">Projects</a></div>
+</div>
+</div> */}
+
+
+
+{/* for desktop tablet */}
+
+{/* <div className='h-screen px-10 '>
+  
+ <div className="max-sm:grid max-sm:grid-cols-2   max-sm:gap-4 flex flex-row justify-around mt-10">
+    <div className=" flex justify-center items-center text-center text-2xl font-bold max-sm:py-4 py-3 h-30 0 rounded-xl min-md:mt-16 ">Hi! I Am Afroj.</div>
+   <div className="  max-sm:w-30 max-sm:h-30 h-60 w-60 bg-purple-600 hover:outline-2 transition duration-3000 rounded-full flex items-center justify-center text-white font-bold  ">
+   A  
+  </div>   
+ 
+</div>
+   <div className="mt-4 max-sm:grid  max-sm:grid-row-2 max-sm:gap-4 gap-5 flex flex-row justify-center ">
+     <div className='max-sm:h-22 max-sm:w-full w-120 outline-1 outline-blue-400 rounded-xl text-center font-semibold p-3'>I'm a MERN Stack Developer & Web Enthusiast</div>
+     <div className='max-sm:w-full outline-1 w-99 min-md:w-120 outline-blue-400 rounded-xl text-center py-3'> Passionate about building modern, responsive, and interactive web applications using the MERN stack. I love turning ideas into beautiful, scalable digital experiences.</div>
+</div>
+
+<div className=' w-full flex h-10 mt-10 flex-row gap-4 justify-center rounded-4xl' >
+  <div className='p-2 font-medium h-10 outline  outline-purple-400 rounded-full hover:outline-2 ' ><a href="/about">About Me</a></div>
+  <div className='p-2 font-medium h-10 outline  bg-purple-800 rounded-full hover:cursor-pointer hover:bg-purple-700' ><a href="/projects">Projects</a></div>
+</div>
+</div> */}
+
+
+
+            {/* <div data-aos="zoom-in" className=' discription min-md:h-83 h-full w-full outline-1 outline-blue-400 rounded-xl p-2 flex gap-1  justify-center items-center'>
+              <div className=' flex justify-center items-center' >
+                <VerticalTimeline layout="1-column-left">
+                  <VerticalTimelineElement
+                    date={2025}
+                    iconStyle={{ background: '#6f32c6', color: '' }}
+                  >
+                    <span className="vertical-timeline-element-title font-bold text-xl">WORK EXPERIENCE</span>
+                    <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dignissimos expedita ducimus blanditiis repellendus iure eligendi architecto, tempora ipsam, et, cumque quisquam labore rem repudiandae nostrum quasi dolorem necessitatibus vitae!</p>
+                  </VerticalTimelineElement>
+                </VerticalTimeline>
+              </div>
+            </div> */}
