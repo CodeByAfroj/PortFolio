@@ -12,7 +12,7 @@ import ui from "../assets/ui.png"
 import { FaArrowCircleDown } from 'react-icons/fa';
 import { FaGithub, FaTwitter } from 'react-icons/fa';
 import { AiOutlineArrowDown } from 'react-icons/ai'
-        import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
 
@@ -45,21 +45,21 @@ import ProfileCircle from '../components/ProfileCircle';
 
 
 const Body = () => {
-const techLogos = [
-  { node: <SiPostman />, title: "Postman", href: "https://www.postman.com" },
-  { node: <SiExpress />, title: "Express.js", href: "https://expressjs.com" },
-  { node: <SiReact />, title: "React", href: "https://react.dev" },
-  { node: <SiNodedotjs />, title: "Node.js", href: "https://nodejs.org" },
-  { node: <SiHtml5 />, title: "HTML5", href: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
-  { node: <SiCss3 />, title: "CSS3", href: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
-  { node: <SiJavascript />, title: "JavaScript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-  { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
-  { node: <SiMongodb />, title: "MongoDB", href: "https://www.mongodb.com" },
+  const techLogos = [
+    { node: <SiPostman />, title: "Postman", href: "https://www.postman.com" },
+    { node: <SiExpress />, title: "Express.js", href: "https://expressjs.com" },
+    { node: <SiReact />, title: "React", href: "https://react.dev" },
+    { node: <SiNodedotjs />, title: "Node.js", href: "https://nodejs.org" },
+    { node: <SiHtml5 />, title: "HTML5", href: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+    { node: <SiCss3 />, title: "CSS3", href: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+    { node: <SiJavascript />, title: "JavaScript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+    { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+    { node: <SiMongodb />, title: "MongoDB", href: "https://www.mongodb.com" },
     { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
-  { node: <SiRedux />, title: "Redux", href: "https://redux.js.org" },
-];
+    { node: <SiRedux />, title: "Redux", href: "https://redux.js.org" },
+  ];
 
-   const cards = [
+  const cards = [
     {
       title: "Full Stack Developer",
       image: Full,
@@ -105,14 +105,14 @@ const techLogos = [
       .then(() => {
         if (name || !email || !msg) {
           toast.success("Response Submitted..(^_^)");
-            setEmail("")
-            setName("")
-             setMsg("")
+          setEmail("")
+          setName("")
+          setMsg("")
 
           return; // Stop further execution
         }
         //react toast
-      
+
       })
       .catch((error) => {
 
@@ -121,10 +121,10 @@ const techLogos = [
       })
 
 
-      
 
-  // Card data array
- 
+
+    // Card data array
+
 
 
 
@@ -136,45 +136,43 @@ const techLogos = [
 
       <div className='h-full px-10 min-md:px-20 '>
         <div className="   flex flex-col mt-5">
-        <div className='rounded-md'>
-  <div data-aos="zoom-out" className="flex items-center text-center max-sm:text-4xl text-5xl font-bold max-sm:py-4 py-3 h-30 rounded-xl min-md:ml-12">
-    Hi,
-  </div>
+          <div className='rounded-md'>
+            <div data-aos="zoom-out" className="flex items-center text-center max-sm:text-4xl text-5xl font-bold max-sm:py-4 py-3 h-30 rounded-xl min-md:ml-12">
+              Hi,
+            </div>
+            <div data-aos="zoom-out" className="flex items-center text-center max-sm:text-4xl text-5xl font-bold max-sm:py-4 py-3 h-30 rounded-xl -mt-12 min-md:ml-14">
+              I'm <span className='px-2 py-1 text-purple-400'> Afroj</span>
+            </div>
+            <div className="text-white text-xl min-md:ml-12  flex flex-wrap items-center gap-2">
+              <span>I Develop Modern</span>
+              <span className="text-purple-400">
+                <Typewriter
+                  words={["User Interfaces", "Web Apps", "Full Stack Solutions"]}
+                  loop={0}            // 0 = run once, change to Infinity for looping
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={80}       // typing speed
+                  deleteSpeed={40}     // deletion speed
+                  delaySpeed={1200}    // delay before typing next word
+                />
+              </span>
+            </div>
+          </div>
 
-  <div data-aos="zoom-out" className="flex items-center text-center max-sm:text-4xl text-5xl font-bold max-sm:py-4 py-3 h-30 rounded-xl -mt-12 min-md:ml-14">
-    I'm <span className='px-2 py-1 text-purple-400'> Afroj</span>
-  </div>
-
-  <div className="text-white text-xl min-md:ml-12 mt-4 flex flex-wrap items-center gap-2">
-    <span>I Develop Modern</span>
-    <span className="text-purple-400">
-      <Typewriter
-        words={["User Interfaces", "Web Apps", "Full Stack Solutions"]}
-        loop={0}            // 0 = run once, change to Infinity for looping
-        cursor
-        cursorStyle="|"
-        typeSpeed={80}       // typing speed
-        deleteSpeed={40}     // deletion speed
-        delaySpeed={1200}    // delay before typing next word
-      />
-    </span>
-  </div>
-</div>
-   
-      {/* Description with subtle fade */}
-    
- 
+          {/* Description with subtle fade */}
 
 
-          
+
+
+
           <div data-aos="zoom-in" className='mt-10 h-70 w-full outline-1 outline-blue-400 rounded-xl'>
-             
+
           </div>
         </div>
         <div className=' w-full flex h-10 mt-10 flex-row gap-4 justify-center rounded-4xl' >
           <div data-aos="fade-right" className='p-2 font-medium h-10 outline  outline-cyan-400 rounded-full hover:outline-3 hover:cursor-pointer text-amber-50 '  ><a href="/about">About Me</a></div>
           <div data-aos="fade-left" className='p-2 font-medium h-10  outline outline-cyan-400  rounded-full hover:outline-3 hover:cursor-pointer text-amber-50 ' ><a href="/projects">Projects</a></div>
-    
+
         </div>
 
 
@@ -183,11 +181,11 @@ const techLogos = [
           <div className="flex justify-center items-center rounded-full h-16 w-10  text-5xl ">
             <div className="h-13 w-7 outline-2  rounded-xl flex justify-center">
               <div className='dot'>.</div>
-              </div>   
+            </div>
           </div>
         </div>
 
-          {/* <div className="flex justify-center mt-20 w-88 ">
+        {/* <div className="flex justify-center mt-20 w-88 ">
           <div className="flex justify-center items-center rounded-full h-16  text-5xl ">
             <div className=" h-13 w-78 outline-2  rounded-xl flex justify-center">
               <div className='dot'>.</div>
@@ -207,12 +205,12 @@ const techLogos = [
           <div className='mt-50 h-full w-full'>
             <div className='flex flex-col justify-center items-center'>
               <h6 data-aos="fade-right" className='font-bold text-gray-300'> INTRODUCTION</h6>
-               {/* <ScrollVelocity
+              {/* <ScrollVelocity
   texts={['React Bits', 'Scroll Down  ']} 
   velocity={20} 
   className="custom-scroll-text"
 /> */}
- 
+
 
 
               <span data-aos="zoom-in" className=' max-sm:text-3xl text-6xl text-center font-extrabold text-gray-300'>OVERVIEW.</span>
@@ -232,44 +230,44 @@ const techLogos = [
             </div>
           </div>
           {/* cards */}
-           <div
-      data-aos="fade-up"
-      className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 p-6 mt-10 place-items-center"
-    >
-      {cards.map((card, index) => (
-        <div
-          key={index}
-          data-aos="fade-up"
-          className="flex justify-center bg-gray-800 items-center text-center p-3  rounded-3xl"
-        >
-          <TiltedCard
-            imageSrc={card.image}
-            altText={card.title}
-            captionText=""
-            containerHeight="250px"
-            containerWidth="210px"
-            imageHeight="100%"
-            imageWidth="100%"
-            rotateAmplitude={12}
-            scaleOnHover={1.1}
-            showMobileWarning={false}
-            showTooltip={true}
-            displayOverlayContent={true}
-            overlayContent={
-              <div className="flex mt-58 ml-4 py-3 px-2">
-                
-              <p
-                  className={`text-sm font-semibold  text-center ${card.textColor}`}
-                >
-                  {card.title}
-                </p>
+          <div
+            data-aos="fade-up"
+            className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 p-6 mt-10 place-items-center"
+          >
+            {cards.map((card, index) => (
+              <div
+                key={index}
+                data-aos="fade-up"
+                className="flex justify-center bg-gray-800 items-center text-center p-3  rounded-3xl"
+              >
+                <TiltedCard
+                  imageSrc={card.image}
+                  altText={card.title}
+                  captionText=""
+                  containerHeight="250px"
+                  containerWidth="210px"
+                  imageHeight="100%"
+                  imageWidth="100%"
+                  rotateAmplitude={12}
+                  scaleOnHover={1.1}
+                  showMobileWarning={false}
+                  showTooltip={true}
+                  displayOverlayContent={true}
+                  overlayContent={
+                    <div className="flex mt-58 ml-4 py-3 px-2">
+
+                      <p
+                        className={`text-sm font-semibold  text-center ${card.textColor}`}
+                      >
+                        {card.title}
+                      </p>
+                    </div>
+
+                  }
+                />
               </div>
-            
-            }
-          />
-        </div>
-      ))}
-    </div>
+            ))}
+          </div>
 
 
           <div className='work flex flex-col justify-center items-center '>
@@ -278,7 +276,7 @@ const techLogos = [
                 <h6 data-aos="fade-right" className='font-bold text-gray-300 max-sm:text-sm '> WHAT I HAVE DONE SO FAR</h6>
                 <span data-aos="zoom-in" className=' max-sm:text-3xl text-6xl text-center font-extrabold text-gray-300'>WORK EXPERIENCE.</span>
               </div>
-              
+
               <div className='max-sm:mt-10 mt-15'>
                 <div className='h-full w-full mt-3 ml-2 p-2'>
                   <div className='max-sm:hidden flex flex-row justify-center gap-10 items-center  p-10 '>
@@ -342,31 +340,31 @@ const techLogos = [
               </div>
 
             </div> */}
-  <div className="flex flex-col items-center justify-center mt-20 bg-gray-50 dark:bg-gray-900">
-      <h2 className="text-4xl font-bold mb-6 text-gray-800 dark:text-white">MY TECH STACK</h2>
+            <div className="flex flex-col items-center justify-center mt-20 bg-gray-50 dark:bg-gray-900">
+              <h2 className="text-4xl font-bold mb-6 text-gray-800 dark:text-white">MY TECH STACK</h2>
 
-      <div className="w-full max-w-6xl mt-6 h-[120px]">
-       <LogoLoop
-  logos={techLogos}
-  speed={100}
-  direction="left"
-  logoHeight={60}
-  gap={50}
-  pauseOnHover
-  scaleOnHover
-  fadeOut
-  fadeOutColor="#ffffff"
-/>
+              <div className="w-full max-w-6xl mt-6 h-[120px]">
+                <LogoLoop
+                  logos={techLogos}
+                  speed={100}
+                  direction="left"
+                  logoHeight={60}
+                  gap={50}
+                  pauseOnHover
+                  scaleOnHover
+                  fadeOut
+                  fadeOutColor="#ffffff"
+                />
 
-      </div>
-    </div>
+              </div>
+            </div>
 
             <div className='mt-50 h-full w-full'>
               <div className='flex flex-col justify-center items-center '>
                 <h6 data-aos="fade-right" className='font-bold text-gray-300 max-sm:text-sm '> MY WORK</h6>
                 <span data-aos="zoom-in" className=' max-sm:text-3xl text-6xl text-center font-extrabold text-gray-300'>PROJECTS.</span>
               </div>
-              
+
               <div className='max-sm:mt-10 mt-15'>
                 <div className='h-full w-full mt-3 ml-2 p-2'>
                   <div className='max-sm:hidden flex flex-row justify-center gap-10 items-center  p-10 '>
@@ -385,54 +383,54 @@ const techLogos = [
 
 
 
-    <div
-      data-aos="fade-up"
-      className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 p-6 mt-10 place-items-center"
-    >
-      {cards.map((card, index) => (
-        <div
-          key={index}
-          data-aos="fade-up"
-          className="flex justify-center bg-gray-800 items-center text-center p-3  rounded-3xl"
-        >
-          <TiltedCard
-            imageSrc={card.image}
-            altText={card.title}
-            captionText=""
-            containerHeight="250px"
-            containerWidth="210px"
-            imageHeight="100%"
-            imageWidth="100%"
-            rotateAmplitude={12}
-            scaleOnHover={1.1}
-            showMobileWarning={false}
-            showTooltip={true}
-            displayOverlayContent={true}
-            overlayContent={
-              <div className="flex mt-58 ml-4 py-3 px-2">
-                
-              <p
-                  className={`text-sm font-semibold  text-center ${card.textColor}`}
+            <div
+              data-aos="fade-up"
+              className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 p-6 mt-10 place-items-center"
+            >
+              {cards.map((card, index) => (
+                <div
+                  key={index}
+                  data-aos="fade-up"
+                  className="flex justify-center bg-gray-800 items-center text-center p-3  rounded-3xl"
                 >
-                  {card.title}
-                </p>
-              </div>
-            
-            }
-          />
-        </div>
-      ))}
-    </div>
- 
-        
+                  <TiltedCard
+                    imageSrc={card.image}
+                    altText={card.title}
+                    captionText=""
+                    containerHeight="250px"
+                    containerWidth="210px"
+                    imageHeight="100%"
+                    imageWidth="100%"
+                    rotateAmplitude={12}
+                    scaleOnHover={1.1}
+                    showMobileWarning={false}
+                    showTooltip={true}
+                    displayOverlayContent={true}
+                    overlayContent={
+                      <div className="flex mt-58 ml-4 py-3 px-2">
 
-            
+                        <p
+                          className={`text-sm font-semibold  text-center ${card.textColor}`}
+                        >
+                          {card.title}
+                        </p>
+                      </div>
+
+                    }
+                  />
+                </div>
+              ))}
+            </div>
+
+
+
+
 
           </div>
-           <Contact/>
+          <Contact />
 
         </div>
-        
+
       </div>
 
     </>
