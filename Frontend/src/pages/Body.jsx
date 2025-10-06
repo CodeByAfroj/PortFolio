@@ -134,7 +134,7 @@ const Body = () => {
   return (
     <>
 
-      <div className='h-full px-10 min-md:px-20 '>
+      <div className='h-full max-md:px-2 min-md:px-20 '>
         <div className="   flex flex-col mt-5">
           <div className='rounded-md'>
             <div data-aos="zoom-out" className="flex items-center text-center max-sm:text-4xl text-5xl font-bold max-sm:py-4 py-3 h-30 rounded-xl min-md:ml-12">
@@ -147,7 +147,7 @@ const Body = () => {
               <span>I Develop Modern</span>
               <span className="text-purple-400">
                 <Typewriter
-                  words={["User Interfaces", "Web Apps", "Full Stack Solutions"]}
+                  words={["User Interfaces", "Web Apps", "Full Stack Apps"]}
                   loop={0}            // 0 = run once, change to Infinity for looping
                   cursor
                   cursorStyle="|"
@@ -340,10 +340,10 @@ const Body = () => {
               </div>
 
             </div> */}
-            <div className="flex flex-col items-center justify-center mt-20 bg-gray-50 dark:bg-gray-900">
-              <h2 className="text-4xl font-bold mb-6 text-gray-800 dark:text-white">MY TECH STACK</h2>
+            <div className="flex flex-col items-center justify-center mt-2">
+              <span data-aos="zoom-in" className=' max-sm:text-3xl text-5xl text-center font-extrabold text-gray-300'>MY TECH STACK</span>
 
-              <div className="w-full max-w-6xl mt-6 h-[120px]">
+              <div className="w-full max-w-6xl mt-10 h-[120px]">
                 <LogoLoop
                   logos={techLogos}
                   speed={100}
