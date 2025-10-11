@@ -1,125 +1,3 @@
-// "use client";
-
-// import { useState } from "react";
-// import { motion } from "framer-motion";
-// import { Mail, User, MessageSquare } from "lucide-react";
-
-// export default function Contact() {
-//   const [name, setName] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [msg, setMsg] = useState("");
-
-//   const submitHandler = (e) => {
-//     e.preventDefault();
-//     alert("Message sent!");
-//   };
-
-//   return (
-//     <div className="relative  flex items-center justify-center min-h-screen bg-gray-900 px-4">
-//       {/* Subtle dark animated background */}
-//       <motion.div
-//         className="absolute  bg-gray-800/70 rounded-full blur-3xl"
-//         animate={{
-//           x: ["-5%", "5%", "-5%"],
-//           y: ["-5%", "5%", "-5%"],
-//         }}
-//         transition={{
-//           repeat: Infinity,
-//           duration: 25,
-//           ease: "easeInOut",
-//         }}
-//       />
-
-//       {/* Glass Card with Left Panel */}
-//       <motion.div
-//         initial={{ opacity: 0, y: 40 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 1 }}
-//         className="relative z-10 flex flex-col md:flex-row w-full max-w-5xl rounded-3xl bg-gray-900/70 backdrop-blur-xl border border-gray-700 shadow-2xl overflow-hidden"
-//       >
-//         {/* Left Panel */}
-//         <div className="hidden md:flex flex-col items-center justify-center bg-gray-800/50 p-8 w-1/2 text-center text-gray-100">
-//           <motion.div
-//             animate={{ rotate: [0, 15, -15, 0] }}
-//             transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-//             className="text-6xl mb-4"
-//           >
-//             👋
-//           </motion.div>
-//           <h3 className="text-2xl font-bold mb-2">Hey, There!</h3>
-//           <p className="text-sm text-gray-300">
-//             Excited to hear from you! Drop a message and let’s make something awesome together.
-//           </p>
-//           <motion.div
-//             whileHover={{ scale: 1.05 }}
-//             className="mt-4 inline-block text-sm font-medium bg-gray-700/40 px-4 py-2 rounded-lg cursor-pointer hover:bg-gray-700/60 transition"
-//           >
-//             Say Hi 👆
-//           </motion.div>
-//         </div>
-
-//         {/* Contact Form */}
-//         <div className="flex-1 p-8">
-//           <h2 className="text-4xl font-bold mb-6 text-center md:text-left text-gray-100">
-//             Contact Me
-//           </h2>
-
-//           <form onSubmit={submitHandler} className="flex flex-col gap-5">
-//             <div className="flex flex-col gap-2">
-//               <label className="text-sm flex items-center gap-2 text-gray-300">
-//                 <User size={16} /> Name
-//               </label>
-//               <input
-//                 type="text"
-//                 placeholder="Enter your name"
-//                 value={name}
-//                 onChange={(e) => setName(e.target.value)}
-//                 className="bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-gray-100 placeholder-gray-400 transition"
-//               />
-//             </div>
-
-//             <div className="flex flex-col gap-2">
-//               <label className="text-sm flex items-center gap-2 text-gray-300">
-//                 <Mail size={16} /> Email
-//               </label>
-//               <input
-//                 type="email"
-//                 placeholder="Enter your email"
-//                 value={email}
-//                 onChange={(e) => setEmail(e.target.value)}
-//                 className="bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-gray-100 placeholder-gray-400 transition"
-//               />
-//             </div>
-
-//             <div className="flex flex-col gap-2">
-//               <label className="text-sm flex items-center gap-2 text-gray-300">
-//                 <MessageSquare size={16} /> Message
-//               </label>
-//               <textarea
-//                 placeholder="Write your message..."
-//                 rows="4"
-//                 value={msg}
-//                 onChange={(e) => setMsg(e.target.value)}
-//                 className="bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-gray-100 placeholder-gray-400 transition"
-//               />
-//             </div>
-
-//             <motion.button
-//               whileHover={{ scale: 1.05 }}
-//               whileTap={{ scale: 0.95 }}
-//               type="submit"
-//               className="mt-2 bg-cyan-600 hover:bg-cyan-500 text-white font-medium py-3 rounded-lg shadow-lg hover:shadow-xl transition"
-//             >
-//               Send Message
-//             </motion.button>
-//           </form>
-//         </div>
-//       </motion.div>
-//     </div>
-//   );
-// }
-
-
 
 "use client";
 // // "use client";
@@ -220,7 +98,7 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <div className="flex-1 p-8">
+        <div className="flex-1 px-5 py-3">
           <h2 className="text-4xl font-bold mb-6 text-center md:text-left text-gray-100">
             Contact Me
           </h2>
@@ -279,3 +157,550 @@ export default function Contact() {
     </div>
   );
 }
+
+
+
+
+// import React from 'react'
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+
+// import emailjs from "emailjs-com";
+// import { motion } from "framer-motion";
+
+// function Contact() {
+//   const sendEmail = (e) => {
+//     e.preventDefault();
+
+//     emailjs
+//       .sendForm(
+//         "service_72innvp",
+//         "template_xurnl1e",
+//         e.target,
+//         "KQmRqRad-nZh4mllW"
+//       )
+//       .then(
+//         (result) => {
+//           toast.success("Success!", {
+//   position: "top-center",
+//   autoClose: 3000,
+//    pauseOnHover: true,
+//   theme: "colored"
+// });
+
+//         },
+//         (error) => {
+//           toast.error("Failed to send a message", {
+//   position: "bottom-right",
+//   autoClose: 5000,
+//   theme: "colored",
+//   hideProgressBar: false,
+//   closeOnClick: true,
+//   pauseOnHover: true,
+  
+// });
+
+//         }
+//       );
+//   };
+
+//   const notify = () => {
+//     toast.error("Failed to send message", {
+//   position: "bottom-right",
+//   autoClose: 5000,
+//   theme: "colored",
+//   hideProgressBar: false,
+//   closeOnClick: true,
+//   pauseOnHover: true,
+//   draggable: true
+// });
+
+//   }
+
+
+//   const fadeInUp = {
+//     hidden: { opacity: 0, y: 20 },
+//     visible: { opacity: 1, y: 0 },
+//   };
+
+//   return (
+
+
+
+
+//     <>
+
+
+
+
+
+//       <div className=" max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
+//         {/* Left: Contact Info */}
+//         <motion.div
+//           className="space-y-10"
+//           variants={fadeInUp}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           transition={{ duration: 0.6 }}
+//         >
+//           <h2 className="text-3xl lg:mt-50 max-md:text-center font-bold text-gray-800 dark:text-gray-100">
+//             Get in Touch
+//           </h2>
+//           <p className="text-gray-800 dark:text-gray-300">
+//             Have questions or need assistance? Reach out to us through the form or
+//             use the details below.
+//           </p>
+
+//           <div className="space-y-6">
+
+//             <a
+
+//               href="tel:+919921928678"
+//               target="_blank"
+//               rel="noopener noreferrer"
+
+//             >
+//               {/* Phone */}
+//               <motion.div
+//                 className="flex max-md:-ml-16 max-md:justify-center max-md:items-center items-start space-x-4"
+//                 whileHover={{ scale: 1.05 }}
+//                 transition={{ type: "spring", stiffness: 120 }}
+//               >
+//                 <div className="p-1  bg-green-100 dark:bg-green-900 rounded-lg">
+//                   <div className="p-1 bg-green-100 dark:bg-green-900 rounded-lg">
+//                     <svg
+//                       className="w-6 h-6 text-green-600 dark:text-green-300"
+//                       fill="none"
+//                       stroke="currentColor"
+//                       viewBox="0 0 24 24"
+//                     >
+//                       <path
+//                         strokeLinecap="round"
+//                         strokeLinejoin="round"
+//                         strokeWidth="2"
+//                         d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.667 4.998a1 1 0 01-.217 1.02L8.664 11.664a16.014 16.014 0 006.672 6.672l1.958-1.958a1 1 0 011.02-.217l4.998 1.667a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C8.954 21 3 15.046 3 8V5z"
+//                       />
+//                     </svg>
+//                   </div>
+
+//                 </div>
+//                 <div>
+//                   <h4 className="font-bold text-gray-800 dark:text-gray-100">
+//                     Call Us
+//                   </h4>
+//                   <p className="text-gray-600 dark:text-gray-200">+91 9921928678</p>
+//                 </div>
+//               </motion.div>
+//             </a>
+
+//             <a
+
+//               href="https://mail.google.com/mail/?view=cm&fs=1&to=dentbuddy01@gmail.com"
+//               target="_blank"
+//               rel="noopener noreferrer"
+
+//             >
+//               {/* Email */}
+//               <motion.div
+//                 className="flex mt-2 max-md:justify-center max-md:items-center items-start space-x-4"
+//                 whileHover={{ scale: 1.05 }}
+//                 transition={{ type: "spring", stiffness: 120 }}
+//               >
+//                 <div className="p-2  bg-purple-100 dark:bg-purple-900 rounded-lg">
+//                   <svg
+//                     xmlns="http://www.w3.org/2000/svg"
+//                     className="w-6 h-6 text-purple-600 dark:text-purple-300"
+//                     fill="none"
+//                     viewBox="0 0 24 24"
+//                     stroke="currentColor"
+//                     strokeWidth={2}
+//                   >
+//                     <path
+//                       strokeLinecap="round"
+//                       strokeLinejoin="round"
+//                       d="M16 12H8m0 0l-4-4m4 4l-4 4m16-4h-8M3 5h18a2 2 0 012 2v10a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2z"
+//                     />
+//                   </svg>
+//                 </div>
+
+//                 <div>
+//                   <h4 className="font-semibold text-gray-800 dark:text-gray-200">
+//                     Email Us
+//                   </h4>
+//                   <p className="text-gray-600 dark:text-gray-400">
+//                     dentbuddy01@gmail.com
+//                   </p>
+//                 </div>
+//               </motion.div>
+
+//             </a>
+//           </div>
+//         </motion.div>
+
+//          <div>
+//       <button onClick={notify}>Notify!</button>
+//       <ToastContainer />
+//     </div>
+
+
+//         {/* Right: Contact Form */}
+//         <motion.form
+//           onSubmit={sendEmail}
+//           className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8 space-y-6"
+//           variants={fadeInUp}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           transition={{ duration: 0.6, delay: 0.2 }}
+//         >
+//           <h3 className="text-2xl font-bold text-center text-blue-600 dark:text-blue-400">
+//             Send Us a Message
+//           </h3>
+
+//           {/* Name & Email in Grid */}
+//           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+//             <div>
+//               <label className="block text-sm text-gray-700 dark:text-gray-200">
+//                 Full Name
+//               </label>
+//               <input
+//                 type="text"
+//                 name="name"
+//                 placeholder="John Doe"
+//                 className="mt-2 w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg 
+//           focus:ring-2 focus:ring-blue-500 focus:outline-none bg-gray-50 dark:bg-gray-800 
+//           text-gray-800 dark:text-gray-100"
+//                 required
+//               />
+//             </div>
+
+//             <div>
+//               <label className="block text-sm text-gray-700 dark:text-gray-200">
+//                 Email
+//               </label>
+//               <input
+//                 type="email"
+//                 name="email"
+//                 placeholder="you@example.com"
+//                 className="mt-2 w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg 
+//           focus:ring-2 focus:ring-blue-500 focus:outline-none bg-gray-50 dark:bg-gray-800 
+//           text-gray-800 dark:text-gray-100"
+//                 required
+//               />
+//             </div>
+//           </div>
+
+//           {/* Subject */}
+//           <div>
+//             <label className="block text-sm text-gray-700 dark:text-gray-200">
+//               Subject
+//             </label>
+//             <input
+//               type="text"
+//               name="feedback"
+//               placeholder="How can we help you?"
+//               className="mt-2 w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg 
+//         focus:ring-2 focus:ring-blue-500 focus:outline-none bg-gray-50 dark:bg-gray-800 
+//         text-gray-800 dark:text-gray-100"
+//               required
+//             />
+//           </div>
+
+//           {/* Message */}
+//           <div>
+//             <label className="block text-sm text-gray-700 dark:text-gray-200">
+//               Message
+//             </label>
+//             <textarea
+//               name="message"
+//               rows="5"
+//               placeholder="Write your message..."
+//               className="mt-2 w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg 
+//         focus:ring-2 focus:ring-blue-500 focus:outline-none bg-gray-50 dark:bg-gray-800 
+//         text-gray-800 dark:text-gray-100"
+//               required
+//             ></textarea>
+//           </div>
+
+//           {/* Button */}
+//           <motion.button
+//             type="submit"
+//             className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold py-3 
+//       rounded-lg shadow-md"
+//             whileHover={{ scale: 1.05, }}
+//             transition={{ type: "spring", stiffness: 120 }}
+//           >
+//             Send Message
+//           </motion.button>
+//         </motion.form>
+//       </div>
+
+
+
+
+//     </>
+
+//   );
+// }
+
+
+
+
+// export default Contact
+
+
+
+// import React from "react";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
+// import emailjs from "emailjs-com";
+// import { motion } from "framer-motion";
+
+// function Contact() {
+//   const sendEmail = (e) => {
+//     e.preventDefault();
+
+//     const form = e.target;
+//     const name = form.name.value.trim();
+//     const email = form.email.value.trim();
+//     const subject = form.feedback.value.trim();
+//     const message = form.message.value.trim();
+
+//     // Extra UX: Prevent empty submissions
+//     if (!name || !email || !subject || !message) {
+//       toast.warning("⚠️ Please fill out all fields", {
+//         position: "top-center",
+//         autoClose: 3000,
+//         pauseOnHover: true,
+//         theme: "colored",
+//       });
+//       return;
+//     }
+
+//     emailjs
+//       .sendForm(
+//         "",
+//         "",
+//         form,
+//         ""
+//       )
+//       .then(
+//         () => {
+//           toast.success("Message sent successfully!", {
+//             position: "top-center",
+//             autoClose: 3000,
+//             pauseOnHover: true,
+//             theme: "colored",
+//           });
+//           form.reset(); // Clear form after success
+//         },
+//         () => {
+//           toast.error("Failed to send message. Try again later.", {
+//             position: "bottom-right",
+//             autoClose: 4000,
+//             theme: "colored",
+//           });
+//         }
+//       );
+//   };
+
+//   const fadeInUp = {
+//     hidden: { opacity: 0, y: 20 },
+//     visible: { opacity: 1, y: 0 },
+//   };
+
+//   return (
+//     <>
+//       {/* Toast Container at the root */}
+//       <ToastContainer />
+
+//       <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
+//         {/* Left: Contact Info */}
+//         <motion.div
+//           className="space-y-10"
+//           variants={fadeInUp}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           transition={{ duration: 0.6 }}
+//         >
+//           <h2 className="text-3xl max-md:text-center font-bold text-gray-800 dark:text-gray-100">
+//             Get in Touch
+//           </h2>
+         
+
+//           <div className="space-y-6">
+//             {/* Phone */}
+//             <a
+//               href="tel:+91"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//             >
+//               <motion.div
+//                 className="flex max-sm:-ml-16 max-md:justify-center items-start space-x-4"
+//                 whileHover={{ scale: 1.05 }}
+//                 transition={{ type: "spring", stiffness: 120 }}
+//               >
+//                 <div className="p-2 bg-green-100 dark:bg-green-900 rounded-lg">
+//                   <svg
+//                     className="w-6 h-6 text-green-600 dark:text-green-300"
+//                     fill="none"
+//                     stroke="currentColor"
+//                     viewBox="0 0 24 24"
+//                   >
+//                     <path
+//                       strokeLinecap="round"
+//                       strokeLinejoin="round"
+//                       strokeWidth="2"
+//                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.667 4.998a1 1 0 01-.217 1.02L8.664 11.664a16.014 16.014 0 006.672 6.672l1.958-1.958a1 1 0 011.02-.217l4.998 1.667a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C8.954 21 3 15.046 3 8V5z"
+//                     />
+//                   </svg>
+//                 </div>
+//                 <div>
+//                   <h4 className="font-bold text-gray-800 dark:text-gray-100">
+//                     Call 
+//                   </h4>
+//                   <p className="text-gray-600 dark:text-gray-200">
+//                     +91 
+//                   </p>
+//                 </div>
+//               </motion.div>
+//             </a>
+
+//             {/* Email */}
+//             <a
+//               href="mailto:mulaniafroj6@gmail.com"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//             >
+//               <motion.div
+//                 className="flex max-md:justify-center items-start space-x-4"
+//                 whileHover={{ scale: 1.05 }}
+//                 transition={{ type: "spring", stiffness: 120 }}
+//               >
+//                 <div className="p-2 bg-purple-100 dark:bg-purple-900 rounded-lg">
+//                   <svg
+//                     xmlns="http://www.w3.org/2000/svg"
+//                     className="w-6 h-6 text-purple-600 dark:text-purple-300"
+//                     fill="none"
+//                     viewBox="0 0 24 24"
+//                     stroke="currentColor"
+//                     strokeWidth={2}
+//                   >
+//                     <path
+//                       strokeLinecap="round"
+//                       strokeLinejoin="round"
+//                       d="M16 12H8m0 0l-4-4m4 4l-4 4m16-4h-8M3 5h18a2 2 0 012 2v10a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2z"
+//                     />
+//                   </svg>
+//                 </div>
+//                 <div>
+//                   <h4 className="font-semibold text-gray-800 dark:text-gray-200">
+//                     Email 
+//                   </h4>
+//                   <p className="text-gray-600 dark:text-gray-400">
+//                     mulaniafroj6@gmail.com
+//                   </p>
+//                 </div>
+//               </motion.div>
+//             </a>
+//           </div>
+//         </motion.div>
+
+//         {/* Right: Contact Form */}
+//         <motion.form
+//           onSubmit={sendEmail}
+//           className=" dark:bg-gray-900 rounded-2xl shadow-lg p-8 space-y-6 outline px-10"
+//           variants={fadeInUp}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true }}
+//           transition={{ duration: 0.6, delay: 0.2 }}
+//         >
+//           <h3 className="text-2xl font-bold text-center text-blue-600 dark:text-blue-400">
+//             Send Me a Message
+//           </h3>
+
+//           {/* Name & Email */}
+//           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+//             <div>
+//               <label className="block text-sm text-gray-700 dark:text-gray-200">
+//                 Full Name
+//               </label>
+//               <input
+//                 type="text"
+//                 name="name"
+//                 placeholder="John Doe"
+//                 className="mt-2 w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg 
+//                 focus:ring-2 focus:ring-blue-500 focus:outline-none bg-gray-50 dark:bg-gray-800 
+//                 text-gray-800 dark:text-gray-100"
+//                 required
+//               />
+//             </div>
+
+//             <div>
+//               <label className="block text-sm text-gray-700 dark:text-gray-200">
+//                 Email
+//               </label>
+//               <input
+//                 type="email"
+//                 name="email"
+//                 placeholder="you@example.com"
+//                 className="mt-2 w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg 
+//                 focus:ring-2 focus:ring-blue-500 focus:outline-none bg-gray-50 dark:bg-gray-800 
+//                 text-gray-800 dark:text-gray-100"
+//                 required
+//               />
+//             </div>
+//           </div>
+
+//           {/* Subject */}
+//           <div>
+//             <label className="block text-sm text-gray-700 dark:text-gray-200">
+//               Subject
+//             </label>
+//             <input
+//               type="text"
+//               name="feedback"
+//               placeholder="How can we help you?"
+//               className="mt-2 w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg 
+//               focus:ring-2 focus:ring-blue-500 focus:outline-none dark:bg-gray-800 
+//               text-gray-800 dark:text-gray-100"
+//               required
+//             />
+//           </div>
+
+//           {/* Message */}
+//           <div>
+//             <label className="block text-sm text-gray-700 dark:text-gray-200">
+//               Message
+//             </label>
+//             <textarea
+//               name="message"
+//               rows="5"
+//               placeholder="Write your message..."
+//               className="mt-2 w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg 
+//               focus:ring-2 focus:ring-blue-500 focus:outline-none bg-gray-50 dark:bg-gray-800 
+//               text-gray-800 dark:text-gray-100"
+//               required
+//             ></textarea>
+//           </div>
+
+//           {/* Button */}
+//           <motion.button
+//             type="submit"
+//             className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold py-3 
+//             rounded-lg shadow-md hover:shadow-lg transition"
+//             whileHover={{ scale: 1.05 }}
+//             transition={{ type: "spring", stiffness: 120 }}
+//           >
+//             Send Message
+//           </motion.button>
+//         </motion.form>
+//       </div>
+//     </>
+//   );
+// }
+
+// export default Contact;

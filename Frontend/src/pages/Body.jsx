@@ -340,10 +340,10 @@ const Body = () => {
               </div>
 
             </div> */}
-            <div className="flex flex-col items-center justify-center mt-2">
+            <div className="flex flex-col items-center justify-center mt-8">
               <span data-aos="zoom-in" className=' max-sm:text-3xl text-5xl text-center font-extrabold text-gray-300'>MY TECH STACK</span>
 
-              <div className="w-full max-w-6xl mt-10 h-[120px]">
+              <div className="w-full max-w-6xl mt-18 h-[120px]">
                 <LogoLoop
                   logos={techLogos}
                   speed={100}

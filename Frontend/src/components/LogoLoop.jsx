@@ -87,7 +87,7 @@ const LogoLoop = ({
                 }}
               >
                 {logo.node ? (
-                  <span className="text-4xl min-md:text-5xl">{logo.node}</span>
+                  <span className="text-4xl min-md:text-6xl">{logo.node}</span>
                 ) : (
                   <img
                     src={logo.src}
