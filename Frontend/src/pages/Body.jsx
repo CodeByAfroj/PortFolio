@@ -22,7 +22,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { toast } from 'react-toastify';
 import FloatingIslandScene from '../components/FloatingIslandScene';
-import EarthScene from '../components/EarthScene';
 import LaptopScene from '../components/LaptopScene';
 import ScrollVelocity from '../components/ScrollVelocity';
 import LogoLoop from '../components/LogoLoop';
@@ -136,7 +135,7 @@ const Body = () => {
 
       <div className='h-full max-md:px-2 min-md:px-20 '>
         <div className="   flex flex-col mt-5">
-          <div className='rounded-md'>
+          <div className='rounded-md ml-2'>
             <div data-aos="zoom-out" className="flex items-center text-center max-sm:text-4xl text-5xl font-bold max-sm:py-4 py-3 h-30 rounded-xl min-md:ml-12">
               Hi,
             </div>
@@ -359,7 +358,7 @@ const Body = () => {
               </div>
             </div>
 
-            <div className='mt-50 h-full w-full'>
+            <div className='mt-25 h-full w-full'>
               <div className='flex flex-col justify-center items-center '>
                 <h6 data-aos="fade-right" className='font-bold text-gray-300 max-sm:text-sm '> MY WORK</h6>
                 <span data-aos="zoom-in" className=' max-sm:text-3xl text-6xl text-center font-extrabold text-gray-300'>PROJECTS.</span>
